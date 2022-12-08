@@ -1,16 +1,16 @@
-# activities
-## activity 1
+# Activities
+## Practise 1
 
 ---
 
-1. go to r1 and enable a new network adapter
-    * select r1 (do not start it yet)
-    * select settings
-    * go to network tab in setting
-    * select an empty netowrk adapter
-    * attach to internal network (name it grp1_64)
-    * make sure cable is connected check box is checked
-2. make new clones called test1 and test2 `(link clone not full clone)`
+1. Go to R1 and enable a new network adapter
+    * Select r1 (do not start it yet)
+    * Select settings
+    * Go to network tab in setting
+    * Select an empty netowrk adapter
+    * Attach to internal network (name it grp1_64)
+    * Make sure cable is connected check box is checked
+2. Make new clones called test1 and test2 `(link clone not full clone)`
     * enable thier network adapters as well
     * generate new MAC addresses.
     * you can give them MAC addresses that are not in use on the network. It
