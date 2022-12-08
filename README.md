@@ -5,7 +5,7 @@
 
 1. go to r1 and enable a new network adapter
     * select r1 (do not start it yet)
-    * slece settings
+    * select settings
     * go to network tab in setting
     * select an empty netowrk adapter
     * attach to internal network (name it grp1_64)
