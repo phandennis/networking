@@ -139,6 +139,10 @@ Edit that menu to have a IPv4 range that will be given to you.
    ```
    sudo scp admin@10.20.30.100;/etc/bird.conf /etc/bird.conf
    ```
+   
+   or ssh into r1 and cat the /etc/bird.conf file and copy and paste it into /etc/bird.conf for the new router
+   
+   
     - then change the file to have only the "enp0s3" and "enp0s8" interfaces.
         ```
         log syslog all;             # Log all messages
