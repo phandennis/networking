@@ -89,17 +89,16 @@ Edit that menu to have a IPv4 range that will be given to you.
     - `ping 10.0.45.125`
 
 
-## activity 2
+## Practise 2
 
 ---
 
-1. make a new router (clone it from the base image) and give it the name `grp1_rtr`.
-2. you may give them custom MAC addresses if you want, but not required for
-   this activity.
-    * enable this adapter attach to `Host-only Adapter` and select the same network on as r1 and r2 on adapter 1.
-    * enable another adapter on the internal network and call it `grp_128`.
-3. make two clones and make them connected to the `internal network` name `grp_128` call your new cloned vm test3 and test4.
-4. move on to the router`(grp1_rtr)`, all the work will be done on this router now.
+1. Clone a router from the base imsage and name it `grp1_rtr`.
+2. You may give them custom MAC addresses if you want, but not required for this activity.  
+    * Enable this adapter attach to `Host-only Adapter` and select the same network on as R1 and R2 on adapter 1.
+    * Enable another adapter on the internal network and call it `grp_128`.
+3. Make two clones and make them connected to the `internal network` name `grp_128` call your new cloned vm test3 and test4.
+4. Move on to the router`(grp1_rtr)`, all the work will be done on this router now.
 5. `sudo nmtui` and edit enp0s3's ipv4 address to be `10.20.30.10/24`, and save
    this. 
 6. on the second adapter on nmtui, we will give the address from the given range.
