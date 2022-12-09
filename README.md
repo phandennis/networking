@@ -123,7 +123,7 @@ Edit that menu to have a IPv4 range that will be given to you.
                     }
         }
         ```
-    importent note: without fixed-address, your host will still connect. The dhcp server will ramdonly assign the address from the range you have given it. (in this case  10.45.129 to 10.45.139) to the host. To find the address, you can use the command "ip -a" on the host device.  
+    Important note: without fixed-address, your host will still connect. The dhcp server will ramdonly assign the address from the range you have given it. (in this case  10.45.129 to 10.45.139) to the host. To find the address, you can use the command "ip -a" on the host device.  
     `*host device here means test3 and test4`
     - then restart the service
     - then enable ipforwarding on the router
