@@ -1,16 +1,16 @@
-# Activities
-## Practise 1
+# activities
+## activity 1
 
 ---
 
-1. Go to R1 and enable a new network adapter
-    * Select r1 (do not start it yet)
-    * Select settings
-    * Go to network tab in setting
-    * Select an empty netowrk adapter
-    * Attach to internal network (name it grp1_64)
-    * Make sure cable is connected check box is checked
-2. Make new clones called test1 and test2 `(link clone not full clone)`
+1. go to r1 and enable a new network adapter
+    * select r1 (do not start it yet)
+    * slece settings
+    * go to network tab in setting
+    * select an empty netowrk adapter
+    * attach to internal network (name it grp1_64)
+    * make sure cable is connected check box is checked
+2. make new clones called test1 and test2 `(link clone not full clone)`
     * enable thier network adapters as well
     * generate new MAC addresses.
     * you can give them MAC addresses that are not in use on the network. It
@@ -35,12 +35,12 @@ Edit that menu to have a IPv4 range that will be given to you.
             range 10.0.45.65 10.0.45.75;
             host test1 {
                     hardware ethernet 02:00:00:00:00:90;
-                    fixed-address 10.0.45.126;
+                    fixed-address 10.0.45.125;
             }
 
             host test2 {
                     hardware ethernet 02:00:00:00:00:A0;
-                    fixed-address 10.0.45.125;
+                    fixed-address 10.0.45.124;
             }
         }
         ```
@@ -89,22 +89,23 @@ Edit that menu to have a IPv4 range that will be given to you.
     - `ping 10.0.45.125`
 
 
-## Practise 2
+## activity 2
 
 ---
 
-1. Clone a router from the base image and name it `grp1_rtr`.
-2. You may give them custom MAC addresses if you want, but not required for this activity.  
-    * Enable this adapter attach to `Host-only Adapter` and select the same network on as R1 and R2 on adapter 1.
-    * Enable another adapter on the internal network and call it `grp_128`.
-3. Make two clones and make them connected to the `internal network` name `grp_128` call your new cloned vm test3 and test4.
-4. Move on to the router`(grp1_rtr)`, all the work will be done on this router now.
+1. make a new router (clone it from the base image) and give it the name `grp1_rtr`.
+2. you may give them custom MAC addresses if you want, but not required for
+   this activity.
+    * enable this adapter attach to `Host-only Adapter` and select the same network on as r1 and r2 on adapter 1.
+    * enable another adapter on the internal network and call it `grp_128`.
+3. make two clones and make them connected to the `internal network` name `grp_128` call your new cloned vm test3 and test4.
+4. move on to the router`(grp1_rtr)`, all the work will be done on this router now.
 5. `sudo nmtui` and edit enp0s3's ipv4 address to be `10.20.30.10/24`, and save
    this. 
-6. On the second adapter on nmtui, we will give the address from the given range.
+6. on the second adapter on nmtui, we will give the address from the given range.
     - `10.0.45.190/26` 
 7. Now you can ssh into this router. 
-8. SSH and edit the dhcpd.conf file:
+8. ssh and edit the dhcpd.conf file:
     - `sudo vim /etc/dhcp/dhcpd.conf`
     - add the following lines to the file
         ```
@@ -123,7 +124,7 @@ Edit that menu to have a IPv4 range that will be given to you.
                     }
         }
         ```
-    Important note: without fixed-address, your host will still connect. The dhcp server will ramdonly assign the address from the range you have given it. (in this case  10.45.129 to 10.45.139) to the host. To find the address, you can use the command "ip -a" on the host device.  
+    important note: without fixed-address, your host will still connect. The dhcp server will ramdonly assign the address from the range you have given it. (in this case  10.45.129 to 10.45.139) to the host. To find the address, you can use the command "ip -a" on the host device.  
     `*host device here means test3 and test4`
     - then restart the service
     - then enable ipforwarding on the router
