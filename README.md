@@ -93,7 +93,7 @@ Edit that menu to have a IPv4 range that will be given to you.
 
 ---
 
-1. Clone a router from the base imsage and name it `grp1_rtr`.
+1. Clone a router from the base image and name it `grp1_rtr`.
 2. You may give them custom MAC addresses if you want, but not required for this activity.  
     * Enable this adapter attach to `Host-only Adapter` and select the same network on as R1 and R2 on adapter 1.
     * Enable another adapter on the internal network and call it `grp_128`.
@@ -101,10 +101,10 @@ Edit that menu to have a IPv4 range that will be given to you.
 4. Move on to the router`(grp1_rtr)`, all the work will be done on this router now.
 5. `sudo nmtui` and edit enp0s3's ipv4 address to be `10.20.30.10/24`, and save
    this. 
-6. on the second adapter on nmtui, we will give the address from the given range.
+6. On the second adapter on nmtui, we will give the address from the given range.
     - `10.0.45.190/26` 
 7. Now you can ssh into this router. 
-8. ssh and edit the dhcpd.conf file:
+8. SSH and edit the dhcpd.conf file:
     - `sudo vim /etc/dhcp/dhcpd.conf`
     - add the following lines to the file
         ```
